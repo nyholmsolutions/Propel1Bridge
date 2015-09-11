@@ -180,7 +180,7 @@ class ModelChoiceList extends ObjectChoiceList
      */
     public function getChoicesForValues(array $values)
     {
-        if (empty($values)) {
+        if (empty($values) || empty($first = reset($values))) {
             return array();
         }
 
